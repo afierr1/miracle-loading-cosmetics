@@ -17,3 +17,12 @@ Route::get('/', function () {
 Route::get('/welcome', function () {
     return view('welcome');
 });
+Route::get('/contact', function () {
+    return view('contact');
+});
+Route::get('/home', function () {
+    return view('home');
+});
+Route::get('/cart', function () {
+    return view('cart');
+});

@@ -1,7 +1,9 @@
 // Bootstrap
 @import "~bootstrap";
-@import "nav-clean";
+@import "_nav-clean.scss";
+@import "_nav-with-search.scss";
 @import url("https://fonts.googleapis.com/css?family=Alef");
+@import "contact-form-clean";
 
 html {
   margin: 10px;
