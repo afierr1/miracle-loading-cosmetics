@@ -25,7 +25,7 @@ public function store(){
 
     $contactForm->name = request('name');
     $contactForm->email = request('email');
-    $contactForm->message = request('name');
+    $contactForm->message = request('message');
 
     $contactForm->save();
 
