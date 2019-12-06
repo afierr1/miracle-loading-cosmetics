@@ -22,6 +22,7 @@
 <div class="row">
     <div class="col">
         <h1>Miracle Loading Cosmetics</h1>
+        <p></p>
     </div>
 </div>
 <div class="row">
@@ -46,9 +47,15 @@
 
         </nav>
     </div>
+    <div class="container">
+        <h1>Featured Products</h1>
+    </div>
+
 </div>
     </div>
 </div>
+
+<p></p>
 <script src="{{ asset('js/bootstrap.js') }}"></script>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>

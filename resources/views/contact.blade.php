@@ -47,12 +47,22 @@
     </div>
 </div>
 <div class="contact-clean">
-    <form method="post">
+    <form action="/contact" method="POST">
+        @csrf
         <h2 class="text-center">Contact us</h2>
-        <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Name"></div>
-        <div class="form-group"><input class="form-control is-invalid" type="email" name="email" placeholder="Email"><small class="form-text text-danger">Please enter a correct email address.</small></div>
-        <div class="form-group"><textarea class="form-control" name="message" placeholder="Message" rows="14"></textarea></div>
-        <div class="form-group"><button class="btn btn-primary" type="submit">submit</button></div>
+
+        <div class="form-group">
+            <input class="form-control" type="text" name="name" id="name" placeholder="Name">
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="email" name="email" id="email" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <textarea class="form-control" name="message" id="message" placeholder="Message" rows="14"></textarea>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit">submit</button>
+        </div>
     </form>
 </div>
 <script src="{{ asset('js/bootstrap.js') }}"></script>
