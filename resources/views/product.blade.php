@@ -54,6 +54,7 @@
                 <img src="{{$product->image}}" alt="{{$product->name}}" style="max-width:350px;max-height:350px;">
             </div>
             <div class="col-6">
+                <p><a href="{{url()->previous()}}">Return to previous page</a></p>
                 <h2><strong>{{$product->name}}</strong></h2>
                 <p>SKU:{{$product->sku}}</p>
                 <p>${{$product->retail_price}}</p>
