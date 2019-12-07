@@ -31,17 +31,37 @@ Route::get('/contact','ContactController@index');
 Route::post('/contact','ContactController@store');
 Route::get('/contact','ContactController@create');
 
-/**
- * Delete Task
- */
-
 
 Route::get('/home', function () {
     return view('home');
 });
-
 Route::get('/','HomeController@index');
 Route::get('/home','HomeController@index');
+
+/**
+ * fragrance routing
+ */
+Route::get('/fragrance', function () {
+    return view('fragrance');
+});
+Route::get('/fragrance','FragranceController@index');
+
+/**
+ * makeup routing
+ */
+Route::get('/make-up', function () {
+    return view('make-up');
+});
+Route::get('/make-up','MakeUpController@index');
+
+
+/**
+ * skincare routing
+ */
+Route::get('/skin-care', function () {
+    return view('make-up');
+});
+Route::get('/skin-care','SkinCareController@index');
 
 Route::get('/cart', function () {
     return view('cart');

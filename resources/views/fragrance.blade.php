@@ -1,11 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: aniat
- * Date: 11/16/2019
- * Time: 7:01 PM
- */
-?>
 <!DOCTYPE html>
 <html>
 
@@ -31,10 +23,10 @@
             <div class="container"><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="nav navbar-nav">
-                        <li class="nav-item" role="presentation"><a class="nav-link active nav-column-border" href="{{ url('home') }}">Home</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link nav-column-border" href="{{ url('skin-care') }}">Skin Care</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link nav-column-border" href="{{ url('home') }}">Home</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link nav-column-border" href="#">Skin Care</a></li>
                         <li class="nav-item" role="presentation"><a class="nav-link nav-column-border" href="{{url('make-up')}}">Make-Up</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link nav-column-border" href="{{url('fragrance')}}">Fragrance</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link active nav-column-border" href="{{url('fragrance')}}">Perfumes</a></li>
                         <li class="nav-item" role="presentation"><a class="nav-link nav-column-border" href="{{ url('contact') }}">Contact</a></li>
                     </ul>
                 </div>
@@ -48,24 +40,24 @@
         </nav>
     </div>
     <div class="container">
-        <h1>Featured Products</h1>
-            @foreach($products as $product)
+        <h1>Perfume</h1>
+        @foreach($fragrances as $fragrance)
             <div class="responsive">
                 <div class="gallery">
                     <a target="_blank" href="#">
-                        <img src="{{$product->image}}" alt="{{$product->name}}" style="max-width:250px;max-height:250px;">
+                        <img src="{{$fragrance->image}}" alt="{{$fragrance->name}}" style="max-width:250px;max-height:250px;">
                     </a>
-                    <div class="desc">{{$product->name}}</div>
+                    <div class="desc">{{$fragrance->name}}</div>
                 </div>
             </div>
-            @endforeach
+        @endforeach
 
 
 
     </div>
 
 </div>
-    </div>
+</div>
 </div>
 
 <p></p>
