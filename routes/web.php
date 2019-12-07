@@ -39,6 +39,10 @@ Route::get('/contact','ContactController@create');
 Route::get('/home', function () {
     return view('home');
 });
+
+Route::get('/','HomeController@index');
+Route::get('/home','HomeController@index');
+
 Route::get('/cart', function () {
     return view('cart');
 });

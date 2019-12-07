@@ -18,9 +18,9 @@
 
 </head>
 
-<body class="text-center">
+<body>
 <div class="row">
-    <div class="col">
+    <div class="col text-center">
         <h1>Miracle Loading Cosmetics</h1>
         <p></p>
     </div>
@@ -49,6 +49,19 @@
     </div>
     <div class="container">
         <h1>Featured Products</h1>
+            @foreach($products as $product)
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="#">
+                        <img src="{{$product->image}}" alt="{{$product->name}}" style="max-width:250px;max-height:250px;">
+                    </a>
+                    <div class="desc">{{$product->name}}</div>
+                </div>
+            </div>
+            @endforeach
+
+
+
     </div>
 
 </div>
