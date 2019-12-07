@@ -1,4 +1,13 @@
-<!DOCTYPE html>
+<?php
+/**
+ * Created by PhpStorm.
+ * User: aniat
+ * Date: 11/16/2019
+ * Time: 7:01 PM
+ */
+?>
+
+        <!DOCTYPE html>
 <html>
 
 <head>
@@ -6,8 +15,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miracle Loading - main</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alef">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="{{mix('/css/app.css')}}">
 
 </head>
@@ -25,10 +32,10 @@
             <div class="container"><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="nav navbar-nav">
-                        <li class="nav-item" role="presentation"><a class="nav-link nav-column-border" href="{{ url('home') }}">Home</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link nav-column-border" href="#">Skin Care</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link active nav-column-border" href="{{ url('home') }}">Home</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link nav-column-border" href="{{ url('skin-care') }}">Skin Care</a></li>
                         <li class="nav-item" role="presentation"><a class="nav-link nav-column-border" href="{{url('make-up')}}">Make-Up</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link active nav-column-border" href="{{url('fragrance')}}">Perfumes</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link nav-column-border" href="{{url('fragrance')}}">Fragrance</a></li>
                         <li class="nav-item" role="presentation"><a class="nav-link nav-column-border" href="{{ url('contact') }}">Contact</a></li>
                     </ul>
                 </div>
@@ -42,14 +49,14 @@
         </nav>
     </div>
     <div class="container">
-        <h1>Perfume</h1>
-        @foreach($fragrances as $fragrance)
+        <h1>Featured Products</h1>
+        @foreach($products as $product)
             <div class="responsive">
                 <div class="gallery">
                     <a target="_blank" href="#">
-                        <img src="{{$fragrance->image}}" alt="{{$fragrance->name}}" style="max-width:250px;max-height:250px;">
+                        <img src="{{$product->image}}" alt="{{$product->name}}" style="max-width:250px;max-height:250px;">
                     </a>
-                    <div class="desc">{{$fragrance->name}}</div>
+                    <div class="desc">{{$product->name}}</div>
                 </div>
             </div>
         @endforeach
