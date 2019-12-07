@@ -51,12 +51,13 @@
     <div class="container">
         <div class="row">
             <div class="col-6">
-                <img src="{{$product->image}}" alt="{{$product->name}}" style="max-width:250px;max-height:250px;">
+                <img src="{{$product->image}}" alt="{{$product->name}}" style="max-width:350px;max-height:350px;">
             </div>
             <div class="col-6">
-                <h2>{{$product->name}}</h2>
+                <h2><strong>{{$product->name}}</strong></h2>
                 <p>SKU:{{$product->sku}}</p>
                 <p>${{$product->retail_price}}</p>
+                <h3><b>Product Description:</b></h3>
                 <p>{{$product->description}}</p>
                 <form>
                     <div class="form">
