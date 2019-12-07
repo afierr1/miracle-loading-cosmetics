@@ -10,9 +10,7 @@ class SearchController extends Controller
     //
    public function show($search){
 
-
        $products=DB::table('products')->where('name', 'ILIKE', '%' . $search . '%')->get();
-
 
        return view('search')->with('products', $products);
    }
@@ -20,13 +18,11 @@ class SearchController extends Controller
    public function index(){
 
        $search = request('search');
-
        $products=DB::table('products')->where('name', 'ILIKE', '%' . $search . '%')->get();
 
        return view('search')->with('products', $products);
-
    }
-    public function store(){
+   public function store(){
 
 
     }
