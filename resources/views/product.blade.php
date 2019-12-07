@@ -32,7 +32,7 @@
             <div class="container"><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="nav navbar-nav">
-                        <li class="nav-item" role="presentation"><a class="nav-link active nav-column-border" href="{{ url('home') }}">Home</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link nav-column-border" href="{{ url('home') }}">Home</a></li>
                         <li class="nav-item" role="presentation"><a class="nav-link nav-column-border" href="{{ url('skin-care') }}">Skin Care</a></li>
                         <li class="nav-item" role="presentation"><a class="nav-link nav-column-border" href="{{url('make-up')}}">Make-Up</a></li>
                         <li class="nav-item" role="presentation"><a class="nav-link nav-column-border" href="{{url('fragrance')}}">Fragrance</a></li>
