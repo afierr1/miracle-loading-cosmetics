@@ -85,7 +85,9 @@
     <div class="col">
         <p>SUBTOTAL $10.00</p>
         <p>SHIPPING $1.00</p>
-        <p>TOTAL $11.00</p><button class="btn btn-primary" type="button">PAYPAL</button><button class="btn btn-primary" type="button">CHECKOUT</button></div>
+        <p>TOTAL $11.00</p>
+        <button class="btn btn-primary" type="button">PAYPAL</button>
+        <button class="btn btn-primary" type="button">CHECKOUT</button></div>
 </div>
 <script src="{{ asset('js/bootstrap.js') }}"></script>
 <script src="assets/js/jquery.min.js"></script>

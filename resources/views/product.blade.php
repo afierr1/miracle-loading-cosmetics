@@ -73,6 +73,7 @@
                         <label for="quantity">Quantity</label>
                         <input type="quantity" class="form-control" id="quantity">
                     </div>
+                    <button class="btn btn-primary" type="button">Add to Cart</button></div>
                 </form>
             </div>
 
