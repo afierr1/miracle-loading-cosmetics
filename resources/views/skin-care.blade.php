@@ -46,7 +46,7 @@
         @foreach($skincares as $skincare)
             <div class="responsive">
                 <div class="gallery">
-                    <a target="_blank" href="#">
+                    <a target="_blank" href="{{url('product')}}/{{$skincare->sku}}">
                         <img src="{{$skincare->image}}" alt="{{$skincare->name}}" style="max-width:250px;max-height:250px;">
                     </a>
                     <div class="desc">{{$skincare->name}}</div>

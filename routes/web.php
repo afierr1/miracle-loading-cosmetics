@@ -63,6 +63,11 @@ Route::get('/skin-care', function () {
 });
 Route::get('/skin-care','SkinCareController@index');
 
+/**
+ * product routing
+ */
+Route::get('/product/{id}','ProductController@show');
+
 Route::get('/cart', function () {
     return view('cart');
 });

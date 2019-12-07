@@ -49,17 +49,40 @@
         </nav>
     </div>
     <div class="container">
-        <h1>Featured Products</h1>
-        @foreach($products as $product)
-            <div class="responsive">
-                <div class="gallery">
-                    <a target="_blank" href="#">
-                        <img src="{{$product->image}}" alt="{{$product->name}}" style="max-width:250px;max-height:250px;">
-                    </a>
-                    <div class="desc">{{$product->name}}</div>
-                </div>
+        <div class="row">
+            <div class="col-6">
+                <img src="{{$product->image}}" alt="{{$product->name}}" style="max-width:250px;max-height:250px;">
             </div>
-        @endforeach
+            <div class="col-6">
+                <p>${{$product->retail_price}}</p>
+                <p>{{$product->description}}</p>
+                <form>
+                    <div class="form">
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Options:</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                //start counting array from 1, first number is option type
+                                @inject('provider', 'App\Http\Controllers\ProductController')
+                                @for($i=1;$i < count($provider->getOptions());$i++)
+                                    <option>{{$provider->getOptions()[$i]}}</option>
+                                @endfor
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Quantity</label>
+                        <input type="quantity" class="form-control" id="quantity">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+
+
+
+
+
 
 
 
