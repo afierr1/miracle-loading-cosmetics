@@ -54,6 +54,8 @@
                 <img src="{{$product->image}}" alt="{{$product->name}}" style="max-width:250px;max-height:250px;">
             </div>
             <div class="col-6">
+                <h2>{{$product->name}}</h2>
+                <p>SKU:{{$product->sku}}</p>
                 <p>${{$product->retail_price}}</p>
                 <p>{{$product->description}}</p>
                 <form>

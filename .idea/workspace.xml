@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc446e3e-f7a5-4cb7-92b6-fe40d8b735e3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cart.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/product.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -152,8 +151,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/product.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="73" column="67" lean-forward="true" selection-start-line="73" selection-start-column="67" selection-end-line="73" selection-end-column="67" />
+            <state relative-caret-position="119">
+              <caret line="56" column="36" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -443,12 +442,12 @@
       <workItem from="1575236904939" duration="6043000" />
       <workItem from="1575326633095" duration="3643000" />
       <workItem from="1575506429109" duration="7092000" />
-      <workItem from="1575514689090" duration="53281000" />
+      <workItem from="1575514689090" duration="53403000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99963000" />
+    <option name="totallyTimeSpent" value="100085000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1184" height="732" extended-state="6" />
@@ -823,8 +822,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/product.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="73" column="67" lean-forward="true" selection-start-line="73" selection-start-column="67" selection-end-line="73" selection-end-column="67" />
+        <state relative-caret-position="119">
+          <caret line="56" column="36" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
         </state>
       </provider>
     </entry>
