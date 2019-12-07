@@ -43,8 +43,15 @@
                 <ul class="nav navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="{{ url('cart') }}">CART</a></li>
                 </ul>
-
-                <form class="form-inline my-2"><input class="form-control" type="text"><button class="btn btn-primary" type="button">Search</button></form>
+                <form action="/search" method="POST" class="form-inline my-2">
+                    @csrf
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="search" id="search">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary" type="submit">Search</button>
+                    </div>
+                </form>
             </div>
 
         </nav>

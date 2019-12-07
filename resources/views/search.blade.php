@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: aniat
- * Date: 11/23/2019
- * Time: 8:09 PM
+ * Date: 11/16/2019
+ * Time: 7:01 PM
  */
 ?>
         <!DOCTYPE html>
@@ -17,12 +17,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="{{mix('/css/app.css')}}">
+
 </head>
 
-<body class="text-center">
+<body>
 <div class="row">
-    <div class="col">
+    <div class="col text-center">
         <h1>Miracle Loading Cosmetics</h1>
+        <p></p>
     </div>
 </div>
 <div class="row">
@@ -31,17 +33,16 @@
             <div class="container"><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="nav navbar-nav">
-                        <li class="nav-item" role="presentation"><a class="nav-link nav-column-border" href="{{ url('home') }}">Home</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link active nav-column-border" href="{{ url('home') }}">Home</a></li>
                         <li class="nav-item" role="presentation"><a class="nav-link nav-column-border" href="{{ url('skin-care') }}">Skin Care</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link nav-column-border" href="{{ url('make-up') }}">Make-Up</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link nav-column-border" href="{{ url('fragrance') }}">Fragrance</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link active nav-column-border" href="{{ url('contact') }}">Contact</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link nav-column-border" href="{{url('make-up')}}">Make-Up</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link nav-column-border" href="{{url('fragrance')}}">Fragrance</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link nav-column-border" href="{{ url('contact') }}">Contact</a></li>
                     </ul>
                 </div>
                 <ul class="nav navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="{{ url('cart') }}">CART</a></li>
                 </ul>
-
                 <form action="/search" method="POST" class="form-inline my-2">
                     @csrf
                     <div class="form-group">
@@ -55,29 +56,36 @@
 
         </nav>
     </div>
-</div>
-<div class="contact-clean">
-    <form action="/contact" method="POST">
-        @csrf
-        <h2 class="text-center">Contact us</h2>
+    <div class="container">
+        <h1>Search Result</h1>
+        @if(count($products) == 0)
+            <p>No Results</p>
+        @else
+            @foreach($products as $product)
+                <div class="responsive">
+                    <div class="gallery">
+                        <a target="_blank" href="{{url('product')}}/{{$product->sku}}">
+                            <img src="{{$product->image}}" alt="{{$product->name}}" style="max-width:250px;max-height:250px;">
+                        </a>
+                        <div class="desc">{{$product->name}}</div>
+                    </div>
+                </div>
+            @endforeach
+        @endif
 
-        <div class="form-group">
-            <input class="form-control" type="text" name="name" id="name" placeholder="Name">
-        </div>
-        <div class="form-group">
-            <input class="form-control" type="email" name="email" id="email" placeholder="Email">
-        </div>
-        <div class="form-group">
-            <textarea class="form-control" name="message" id="message" placeholder="Message" rows="14"></textarea>
-        </div>
-        <div class="form-group">
-            <button class="btn btn-primary" type="submit">submit</button>
-        </div>
-    </form>
+
+
+
+
+
+
+    </div>
+
 </div>
+<script src="{{ mix('js/app.js') }}"></script>
 <script src="{{ asset('js/bootstrap.js') }}"></script>
+
 <script src="assets/js/jquery.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="{{ asset('js/app.js') }}"></script>
 </body>
 

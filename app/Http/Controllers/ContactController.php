@@ -31,6 +31,9 @@ public function store(){
 
     return redirect('/contact');
 
+}
 
+public function search(){
+    $search = request('search');
 }
 }
