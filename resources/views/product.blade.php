@@ -69,11 +69,12 @@
                 <p>${{$product->retail_price}}</p>
                 <h3><b>Product Description:</b></h3>
                 <p>{{$product->description}}</p>
-                <form>
+                <form action="/cart" method="POST">
                     <div class="form">
+                        @csrf
                         <div class="form-group">
-                            <label for="exampleFormControlSelect1">Options:</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
+                            <label for="options">Options:</label>
+                            <select class="form-control" name="options" id="options">
                                 //start counting array from 1, first number is option type
                                 @inject('provider', 'App\Http\Controllers\ProductController')
                                 @for($i=1;$i < count($provider->getOptions());$i++)
@@ -81,24 +82,23 @@
                                 @endfor
                             </select>
                         </div>
+                        <div class="form-group">
+                            <label for="quantity">Quantity</label>
+                            <input type="text" name="quantity" class="form-control" id="quantity">
+                        </div>
+                        <input type="hidden" id="sku" name="sku" value="{{$product->sku}}">
+                        <div class="form-group">
+                            <button class="btn btn-primary" type="submit">Add to Cart</button>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="quantity">Quantity</label>
-                        <input type="quantity" class="form-control" id="quantity">
-                    </div>
-                    <button class="btn btn-primary" type="button">Add to Cart</button></div>
+
+
+
+
                 </form>
             </div>
 
         </div>
-
-
-
-
-
-
-
-
 
     </div>
 

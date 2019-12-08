@@ -32,9 +32,9 @@
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="nav navbar-nav">
                         <li class="nav-item" role="presentation"><a class="nav-link nav-column-border" href="{{ url('home') }}">Home</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link nav-column-border" href="#">Skin Care</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link nav-column-border" href="#">Make-Up</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link nav-column-border" href="#">Fragrance</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link nav-column-border" href="{{ url('skin-care') }}">Skin Care</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link nav-column-border" href="{{ url('make-up') }}">Make-Up</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link nav-column-border" href="{{ url('fragrance') }}">Fragrance</a></li>
                         <li class="nav-item" role="presentation"><a class="nav-link nav-column-border" href="{{ url('contact') }}">Contact</a></li>
                     </ul>
                 </div>
@@ -56,10 +56,16 @@
         </nav>
     </div>
 </div>
+<h2></h2>
+
+<!--Column header-->
 <div class="row">
     <div class="col">
         <h1>Shopping Cart</h1>
         <div class="row">
+            <div class="col">
+
+            </div>
             <div class="col">
                 <p>Product</p>
             </div>
@@ -73,27 +79,35 @@
     </div>
 </div>
 <hr>
+<!--item rows-->
+@foreach($cartList as $item)
 <div class="row">
-    <div class="col"><img style="width: 113px;height: 119px;"></div>
+    <div class="col"><img src="{{$item->image}}" style="width: 113px;height: 119px;"></div>
     <div class="col">
-        <p>Product Name</p>
+        <p>{{$item->name}}</p>
+        <p>Option: {{$item->option}}</p>
     </div>
 
     <div class="col">
+        <p>{{$item->quantity}}</p>
+    </div>
+    <div class="col">
         <div class="row">
             <div class="col">
-                <p>$10.00</p>
+                <p>${{$item->cost}}</p>
             </div>
         </div>
     </div>
 </div>
+@endforeach
+
 <hr>
+
+<!--calculations row-->
 <div class="row">
     <div class="col"></div>
     <div class="col">
-        <p>SUBTOTAL $10.00</p>
-        <p>SHIPPING $1.00</p>
-        <p>TOTAL $11.00</p>
+        <p>TOTAL: ${{$total}}</p>
         <button class="btn btn-primary" type="button">PAYPAL</button>
         <button class="btn btn-primary" type="button">CHECKOUT</button></div>
 </div>

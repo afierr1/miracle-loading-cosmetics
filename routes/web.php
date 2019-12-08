@@ -69,16 +69,20 @@ Route::get('/skin-care','SkinCareController@index');
 Route::get('/product/{id}','ProductController@show');
 
 /**
- * search controller
+ * search routing
  */
-
-
-
 Route::any('/search','SearchController@index');
 
-Route::get('/cart', function () {
-    return view('cart');
-});
+
+/**
+ * cart routing
+ */
+Route::post('/cart','CartController@index');
+Route::get('/cart','CartController@show');
+
+
+
+
 Route::get('/login', function () {
     return view('login');
 });
