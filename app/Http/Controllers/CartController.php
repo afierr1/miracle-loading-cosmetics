@@ -57,7 +57,8 @@ class CartController extends Controller
             $i++;
         }
         $total = getTotalCost($cartList);
-        return view('cart')->with('cartList',$cartList)->with('total',$total);
+        $credential = getApiCredential();
+        return view('cart')->with('cartList',$cartList)->with('total',$total)->with('credential',$credential);
         }
 
 
@@ -101,5 +102,11 @@ function getTotalCost(array $cartList) {
     }
 
     return $total;
+}
+
+function getApiCredential(){
+    $hostname = env("PAYPAL_CLIENT_ID", "default");
+
+    return $hostname;
 }
 

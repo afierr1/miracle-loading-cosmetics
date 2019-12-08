@@ -116,8 +116,33 @@
     <div class="col"></div>
     <div class="col">
         <p>TOTAL: ${{$total}}</p>
-        <button class="btn btn-primary" type="button">PAYPAL</button>
-        <button class="btn btn-primary" type="button">CHECKOUT</button></div>
+        <div id="paypal-button-container"></div>
+        <script src="https://www.paypal.com/sdk/js?client-id={{$credential}}&currency=USD" data-sdk-integration-source="button-factory"></script>
+        <script>
+            paypal.Buttons({
+                style: {
+                    shape: 'rect',
+                    color: 'gold',
+                    layout: 'vertical',
+                    label: 'paypal',
+
+                },
+                createOrder: function(data, actions) {
+                    return actions.order.create({
+                        purchase_units: [{
+                            amount: {
+                                value: '{{$total}}'
+                            }
+                        }]
+                    });
+                },
+                onApprove: function(data, actions) {
+                    return actions.order.capture().then(function(details) {
+                        alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                    });
+                }
+            }).render('#paypal-button-container');
+        </script>
 </div>
 <script src="{{ asset('js/bootstrap.js') }}"></script>
 <script src="assets/js/jquery.min.js"></script>
