@@ -25,6 +25,7 @@
         <h1></h1>
     </div>
 </div>
+
 <div class="row">
     <div class="col">
         <nav class="navbar navbar-light navbar-expand-md navigation-clean-search">
@@ -56,6 +57,7 @@
         </nav>
     </div>
 </div>
+
 <h2></h2>
 
 <!--Column header-->
@@ -144,10 +146,12 @@
             }).render('#paypal-button-container');
         </script>
 </div>
+</div>
 <script src="{{ asset('js/bootstrap.js') }}"></script>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="{{ asset('js/app.js') }}"></script>
+
 </body>
 
 </html>
