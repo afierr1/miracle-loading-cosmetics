@@ -40,6 +40,7 @@ class CartController extends Controller
 
                 //create object with id, option, and quantity
                 $myObj = new \stdClass();
+                $myObj->index = ($i-3);
                 $myObj->id = $temp[0];
                 $myObj->option = $temp[1];
                 $myObj->quantity = $temp[2];
@@ -57,6 +58,17 @@ class CartController extends Controller
         }
         $total = getTotalCost($cartList);
         return view('cart')->with('cartList',$cartList)->with('total',$total);
+        }
+
+
+        public function deleteItem(){
+            return "Hello World";
+        }
+
+        public function delete(){
+            $item = \request('index');
+            session()->forget($item);
+            return Redirect::back();
         }
 }
 
@@ -90,3 +102,4 @@ function getTotalCost(array $cartList) {
 
     return $total;
 }
+

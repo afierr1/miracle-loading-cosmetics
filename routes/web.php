@@ -77,8 +77,11 @@ Route::any('/search','SearchController@index');
 /**
  * cart routing
  */
+
 Route::post('/cart','CartController@index');
 Route::get('/cart','CartController@show');
+Route::delete('/cart','CartController@delete');
+
 
 
 

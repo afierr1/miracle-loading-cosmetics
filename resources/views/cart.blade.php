@@ -22,7 +22,7 @@
 <body class="text-center">
 <div class="row">
     <div class="col">
-        <h1>Miracle Loading Cosmetics</h1>
+        <h1></h1>
     </div>
 </div>
 <div class="row">
@@ -82,12 +82,20 @@
 <!--item rows-->
 @foreach($cartList as $item)
 <div class="row">
-    <div class="col"><img src="{{$item->image}}" style="width: 113px;height: 119px;"></div>
+    <div class="col">
+        <img src="{{$item->image}}" style="width: 113px;height: 119px;">
+        <form action="/cart" method="POST">
+            {{ csrf_field() }}
+            {{ method_field('DELETE') }}
+
+            <input type="hidden" id="index" name="index" value="{{$item->index}}">
+            <button class="btn btn-sm btn-primary">Delete Item</button>
+        </form>
+    </div>
     <div class="col">
         <p>{{$item->name}}</p>
         <p>Option: {{$item->option}}</p>
     </div>
-
     <div class="col">
         <p>{{$item->quantity}}</p>
     </div>
