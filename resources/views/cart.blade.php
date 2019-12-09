@@ -120,7 +120,7 @@
 <div class="row">
     <div class="col"></div>
     <div class="col">
-        <p>TOTAL: ${{$total}}</p>
+        <p>TOTAL: ${{$credential}}</p>
         <div id="paypal-button-container"></div>
 
         <script src="https://www.paypal.com/sdk/js?client-id={{$credential}}&currency=USD" data-sdk-integration-source="button-factory"></script>
