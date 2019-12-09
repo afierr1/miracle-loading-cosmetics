@@ -56,7 +56,10 @@
 
         </nav>
     </div>
+</div>
+
     <div class="container">
+
         <h1>Featured Products</h1>
             @foreach($products as $product)
             <div class="responsive">
@@ -73,7 +76,7 @@
 
     </div>
 
-</div>
+
 <script src="{{ mix('js/app.js') }}"></script>
 <script src="{{ asset('js/bootstrap.js') }}"></script>
 
