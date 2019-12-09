@@ -17,6 +17,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="{{mix('/css/app.css')}}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alef">
+    <script src="{{ asset('js/bootstrap.js') }}"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 </head>
 
 <body class="text-center">
@@ -119,6 +124,7 @@
     <div class="col">
         <p>TOTAL: ${{$total}}</p>
         <div id="paypal-button-container"></div>
+
         <script src="https://www.paypal.com/sdk/js?client-id={{$credential}}&currency=USD" data-sdk-integration-source="button-factory"></script>
         <script>
             paypal.Buttons({
@@ -147,10 +153,6 @@
         </script>
 </div>
 </div>
-<script src="{{ asset('js/bootstrap.js') }}"></script>
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="{{ asset('js/app.js') }}"></script>
 
 </body>
 

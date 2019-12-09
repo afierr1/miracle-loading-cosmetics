@@ -89,3 +89,24 @@ Route::delete('/cart','CartController@delete');
 Route::get('/login', function () {
     return view('login');
 });
+
+/**
+ * ADMIN ROUTING
+ */
+Route::get('/dashboard', function () {
+    return view('admin.dashboard');
+});
+Route::get('/forms', function () {
+    return view('admin.forms');
+});
+Route::get('/forms','AdminForms@index');
+
+Route::get('/allforms', function () {
+    return view('admin.all-forms');
+});
+Route::get('/allforms','AllFormsController@index');
+
+Route::get('/inventory', function () {
+    return view('admin.inventory');
+});
+Route::get('/inventory','InventoryController@index');
